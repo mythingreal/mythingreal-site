@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -75,6 +74,36 @@
             padding: 30px 20px;
             font-size: 14px;
         }
+
+
+        .story-search {
+            display: block;
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #b8b1a5;
+            border-radius: 7px;
+            background: #ffffff;
+            color: #292824;
+            font: inherit;
+            font-size: 16px;
+        }
+
+        .story-search:focus-visible, .story-link:focus-visible {
+            outline: 3px solid #916c42;
+            outline-offset: 3px;
+        }
+
+        .story-entry {
+            border-top: 1px solid #e3dfd6;
+            padding: 18px 0 8px;
+        }
+
+        .story-entry[hidden] { display: none; }
+        .story-entry h3 { margin: 6px 0; }
+        .story-number { color: #655b4e; font-size: 14px; }
+        .story-link { color: #754e26; font-weight: bold; }
+        #search-status { color: #655b4e; font-size: 15px; }
+        #no-results { display: none; }
 
         @media (max-width: 600px) {
             main {
@@ -176,26 +205,33 @@
         <hr>
 
         
-<h2>Történetek</h2>
+<h2 id="tortenetek">Történetek</h2>
 
-<section>
-    <p><strong>001. történet | 18+</strong></p>
+        <p>Keress a történetek címe, leírása vagy témája alapján.</p>
+        <label for="story-search"><strong>Történetkereső</strong></label>
+        <input
+            class="story-search"
+            id="story-search"
+            type="search"
+            placeholder="Például: ellenőrzés, villanyszerelő..."
+            autocomplete="off"
+            aria-controls="story-list"
+        >
+        <p id="search-status" role="status" aria-live="polite">1 történet található.</p>
 
-    <h3>Jogomban áll!</h3>
-
-    <p>
-        Egy meghibásodott elektromos cigaretta,
-        három villanyszerelő és egy váratlan
-        műszaki ellenőrzés találkozása.
-    </p>
-
-    <p>
-        <a href="jogomban-all.html">
-            A teljes történet elolvasása
-        </a>
-    </p>
-</section>
-
+        <div id="story-list">
+            <section class="story-entry" data-search="Jogomban áll! elektromos cigaretta villanyszerelő építkezés műszaki ellenőrzés kolléga abszurd humor">
+                <div class="story-number">001. történet · 18+</div>
+                <h3>Jogomban áll!</h3>
+                <p>
+                    Egy meghibásodott elektromos cigaretta,
+                    három villanyszerelő és egy váratlan
+                    műszaki ellenőrzés találkozása.
+                </p>
+                <p><a class="story-link" href="jogomban-all.html">A teljes történet elolvasása</a></p>
+            </section>
+        </div>
+        <p id="no-results">Nincs a keresésnek megfelelő történet. Próbálj másik kifejezést!</p>
 
     </article>
 </main>
@@ -205,5 +241,32 @@
     <p>Real stories. Everyday absurdities.</p>
 </footer>
 
+<script>
+    (() => {
+        const search = document.getElementById('story-search');
+        const entries = Array.from(document.querySelectorAll('.story-entry'));
+        const status = document.getElementById('search-status');
+        const noResults = document.getElementById('no-results');
+
+        function normalize(text) {
+            return text.toLocaleLowerCase('hu-HU')
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '');
+        }
+
+        search.addEventListener('input', () => {
+            const query = normalize(search.value.trim());
+            let shown = 0;
+            for (const entry of entries) {
+                const searchable = normalize(entry.textContent + ' ' + (entry.dataset.search || ''));
+                const matches = searchable.includes(query);
+                entry.hidden = !matches;
+                if (matches) shown++;
+            }
+            status.textContent = `${shown} történet található.`;
+            noResults.style.display = shown === 0 ? 'block' : 'none';
+        });
+    })();
+</script>
 </body>
 </html>
