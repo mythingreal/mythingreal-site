@@ -1,71 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hu">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Valós munkahelyi történet arról, hogyan szakadt félbe egy fejmosás egyetlen mondattól. MYTHINGREAL – felnőtteknek szóló történetek.">
-<title>A nagy munkahelyi fejmosás | MYTHINGREAL</title>
-<style>
-:root { color-scheme: dark; --bg:#101216; --panel:#1b2027; --text:#f0eee7; --muted:#b4b9c0; --accent:#e1b976; --line:#363a41; }
-*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:17px/1.8 system-ui,-apple-system,"Segoe UI",sans-serif}
-header,main,footer{width:min(100% - 36px,780px);margin-inline:auto}
-header{padding:28px 0 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font-size:1.1rem;font-weight:800;letter-spacing:.14em;color:var(--text);text-decoration:none}
-a{color:var(--accent)} .back{font-size:.9rem;text-decoration:none} main{padding:48px 0 64px}
-.eyebrow{color:var(--accent);text-transform:uppercase;font-size:.76rem;letter-spacing:.14em;font-weight:700}
-h1{font-size:clamp(2rem,5vw,3.35rem);line-height:1.15;letter-spacing:-.025em;margin:15px 0 12px}
-.subtitle{font-size:1.1rem;color:var(--muted);margin:0 0 30px}
-.notice{padding:15px 19px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--muted);font-size:.91rem;margin-bottom:38px}
-article p{margin:0 0 1.25rem} blockquote{margin:24px 0;padding:8px 0 8px 22px;border-left:3px solid var(--accent);font-weight:750;font-size:1.16rem;line-height:1.5}
-.ending{font-weight:800;font-size:1.2rem;margin-top:28px}
-.disclosure{margin-top:50px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
-footer{border-top:1px solid var(--line);padding:23px 0 40px;color:var(--muted);font-size:.85rem}
-@media(max-width:480px){body{font-size:16px}header{align-items:flex-start;flex-direction:column}main{padding-top:32px}blockquote{font-size:1.09rem}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Egy munkahelyi fejmosás, amely egy váratlan mondat után egészen más fordulatot vesz. Valós történet, abszurd humorral.">
+    <title>A fejmosás művészete – MYTHINGREAL</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #f5f3ee; color: #292824; font-family: Georgia, serif; line-height: 1.8; }
+        header { background: #232323; color: #ffffff; text-align: center; padding: 40px 20px; }
+        header a { color: #ffffff; text-decoration: none; }
+        header h1 { margin: 0; font-size: clamp(30px, 7vw, 48px); letter-spacing: 3px; }
+        header p { color: #dddddd; margin: 8px 0 0; }
+        main { max-width: 780px; margin: 40px auto; padding: 0 22px; }
+        article { background: #ffffff; border: 1px solid #e3dfd6; border-radius: 10px; padding: 32px; }
+        h2 { font-size: clamp(27px, 5vw, 36px); line-height: 1.25; margin: 0 0 10px; }
+        .subtitle { font-style: italic; color: #655b4e; font-size: 18px; margin-top: 0; }
+        .notice { border-left: 4px solid #916c42; background: #f4ede1; padding: 12px 18px; margin: 24px 0; }
+        .notice p { margin: 0; }
+        .story p { margin: 0 0 1.15em; }
+        .story strong { font-weight: bold; }
+        .disclosure { border-top: 1px solid #e3dfd6; margin-top: 36px; padding-top: 16px; font-size: 14px; color: #655b4e; }
+        .back { display: inline-block; margin: 22px 0 0; color: #754e26; font-weight: bold; }
+        .back:focus-visible { outline: 3px solid #916c42; outline-offset: 3px; }
+        footer { text-align: center; color: #666666; padding: 30px 20px; font-size: 14px; }
+        @media (max-width: 600px) { main { margin: 20px auto; padding: 0 12px; } article { padding: 22px; } }
+    </style>
 </head>
 <body>
-<header><a class="brand" href="index.html">MYTHINGREAL</a><a class="back" href="index.html">← Vissza a történetekhez</a></header>
+<header>
+    <h1><a href="index.html">MYTHINGREAL</a></h1>
+    <p>Egy szaki hétköznapi, de nem mindennapi történetei</p>
+</header>
 <main>
-<div class="eyebrow">Valós történetek · Felnőtt tartalom (18+)</div>
-<h1>A nagy munkahelyi fejmosás</h1>
-<p class="subtitle">Egy kávé, néhány késés és egy váratlan fordulat.</p>
-<div class="notice">A történet felnőtteknek szól, és szókimondó nyelvezetet tartalmaz.</div>
-<article>
-<p>Az eset ugyanazon az építkezésen történt, ahol a „Jogomban áll!” története is játszódott. Csak valamivel később.</p>
-<p>Már jócskán túl voltunk az építkezésre szánt idő felén, a helyzet pedig finoman szólva sem volt rózsás.</p>
-<p>Főnökünk úgy döntött, ideje egy kicsit rendbe tenni a bandát. Magyarul: lebaszni minket.</p>
-<p>Éppen a nagyfejesek megbeszéléséről érkezett, ahol gyaníthatóan ő is hasonló elbánásban részesült. Lehívott bennünket kávézni a közeli üzlethez.</p>
-<p>Ez nem egészen presszó volt: csokit, nápolyit, kekszet és ajándékcsomagokat árultak, mellékesen kávét is főztek. Mivel a társaság nagy része dohányzott, az utcán álltunk meg beszélgetni.</p>
-<p>Megkezdődött a fejmosás. Sorra kerültek a kollégák, aztán eljutottunk hozzám.</p>
-<p>Itt tartozom némi önkritikával.</p>
-<p>Abban az időben kedvenc sportom az 1 és 30 perc közötti késés volt. A napi kvótát rendszeresen teljesítettem, és ez a nap sem volt kivétel.</p>
-<p>A főnöknek tehát teljesen jogos kifogása volt velem szemben. A munkámmal nem volt baja, de a késéseimmel az őrületbe kergettem.</p>
-<p>A csapatba nemrég érkezett egy új kolléga, akivel nekem is volt egy visszatérő problémám. Amikor reggel beértem és találkoztam vele, mindig köszöntem neki. Ő viszont nekem nem köszönt vissza. Másokkal hogyan viselkedett, az nem is tartozott ide: engem ez bosszantott.</p>
-<p>A főnök éppen őt hozta fel példának. Hogy messzebbről jár, mégis pontosan beér. Hogy nekem is sikerülhetne, ha akarnám.</p>
-<p>És ekkor, minden átvezetés nélkül, úgy döntöttem, hogy megvédem magam. Meg egyúttal azt is szerettem volna, hogy az új kolléga hallja.</p>
-<blockquote>– Én legalább tudok köszönni!</blockquote>
-<p>Csend lett.</p>
-<p>A főnök rám nézett. A többiek is. A késés és a köszönés között ugyanis abban a pillanatban senki sem értette az összefüggést. A főnök azért próbálkozott.</p>
-<p>Az arckifejezése többször megváltozott, a színével együtt. Kinyitotta volna a száját, de nem jött ki rajta hang.</p>
-<p>Mi pedig már szinte láttuk és hallottuk, mi történik a fejében.</p>
-<p>Fogaskerekek csikorogva megakadnak. Az ékszíj közben rendületlenül próbál továbbfutni, egyre hangosabban visít, fütyül, majd egy hatalmas…</p>
-<blockquote>ZÍÍÍMMM!</blockquote>
-<p>…kíséretében elszáll.</p>
-<p>A főnök ezek után még mindig csak nézett. Olyan szúrós tekintettel, amilyennel egy jéghegyet is át lehetne döfni.</p>
-<p>Végül leengedett, színtelen hangon megszólalt:</p>
-<blockquote>– Valóban, legalább te tudsz köszönni.</blockquote>
-<p>Azzal otthagyott minket. Azokat is, akik még nem is kapták meg a magukét.</p>
-<p>Volt, aki röhögött. Az idősebbek csóválták a fejüket. Valakitől pedig megkaptam a nap legtalálóbb értékelését:</p>
-<blockquote>– Te totál hülye vagy!</blockquote>
-<p>Nem nagyon tudtam vitatkozni vele. A késésem attól még késés maradt.</p>
-<p class="ending">De legalább tudtam köszönni.</p>
-</article>
-<div class="disclosure">
-<p>A történet valós eseményeken alapul, a mesélő saját emlékei és nézőpontja szerint. Más résztvevők egyes részletekre eltérően emlékezhetnek.</p>
-<p>A szöveg megfogalmazását és szerkesztését mesterséges intelligencia segítette; a bemutatott események nem mesterséges intelligencia által kitalált történetek.</p>
-</div>
+    <article>
+        <h2>A fejmosás művészete</h2>
+        <p class="subtitle">Avagy egy vezetői értekezlet váratlan következményei</p>
+        <div class="notice"><p><strong>Felnőtteknek szóló tartalom (18+).</strong> Nyers nyelvezetet és káromkodást tartalmazhat.</p></div>
+        <div class="story">
+            <p>Az építkezésen már jócskán túl voltunk a rendelkezésünkre álló idő felén, a munka viszont ezt nem volt hajlandó tudomásul venni.</p>
+            <p>A határidő közeledett, a feladatok szaporodtak, a vezetőség ideges volt. Egyszóval minden adott volt a magyar építőipar megszokott, kiegyensúlyozott működéséhez.</p>
+            <p>Főnökünk egy nap kijött a nagyfejesek értekezletéről, feltehetően nem a kiemelkedő teljesítményéért kapott gratulációkkal a háta mögött.</p>
+            <p>Úgy döntött, a vezetői tapasztalatokat haladéktalanul továbbadja.</p>
+            <p>Magyarul: lebasz minket.</p>
+            <p>Lehívta a társaságot kávézni egy közeli üzlethez, ahol csokoládét, nápolyit, kekszet és ajándékcsomagokat árultak, mellékesen pedig kávét is főztek.</p>
+            <p>Az édességek közelsége nem sokat javított a várható beszélgetés ízén.</p>
+            <p>Mivel a banda nagy része dohányzott, az utcán maradtunk.</p>
+            <p>Megindult az osztás.</p>
+            <p>Szépen, sorban mindenki megkapta a magáét.</p>
+            <p>Aztán rám került a sor.</p>
+            <p>Itt szükséges megjegyeznem, hogy akkoriban sajátos viszonyban álltam a pontossággal.</p>
+            <p>Elismertem a létezését, elméletben támogattam is, de a gyakorlati megvalósítás rendszeresen nehézségekbe ütközött.</p>
+            <p>Napi egy és harminc perc közötti késéseimmel figyelemre méltó következetességet tanúsítottam.</p>
+            <p>Aznap sem okoztam csalódást.</p>
+            <p>A főnököt mindez rettenetesen zavarta.</p>
+            <p>A munkámmal nem volt baja. Ha végre megérkeztem, dolgoztam rendesen. Csak éppen a megérkezésem időpontja nem minden esetben egyezett meg a munkáltató elképzeléseivel.</p>
+            <p>És ebben, valljuk be, igaza volt.</p>
+            <p>Volt azonban egy új kollégánk, aki néhány hete csatlakozott a csapathoz.</p>
+            <p>Pontos ember volt. Olyan pontos, hogy a főnök szerint messzebbről is képes volt időben beérni, mint ahonnan én rendszeresen elkéstem.</p>
+            <p>Csakhogy az illetőnek volt egy apró szokása, ami engem már hetek óta bosszantott.</p>
+            <p><strong>Nekem nem köszönt vissza.</strong></p>
+            <p>Reggelente találkoztunk, én köszöntem, ő pedig következetesen figyelmen kívül hagyott.</p>
+            <p>Nem tudom, miért. Mindenesetre bosszantott.</p>
+            <p>A főnök erről mit sem tudva éppen őt állította elém követendő példaként.</p>
+            <p>Hogy ő bezzeg pontos.</p>
+            <p>Hogy messzebbről jár.</p>
+            <p>Hogy neki mégis sikerül.</p>
+            <p>És hogy én miért nem vagyok képes ugyanerre?</p>
+            <p>Itt úgy döntöttem, ideje megvédenem magam.</p>
+            <p>Az érvelésnek van egy sajátos módszere: az ember az ellenfél állítására egy másik, önmagában igaz, de a tárgyhoz semmilyen módon nem kapcsolódó állítással válaszol.</p>
+            <p>Én ezt választottam.</p>
+            <p>Lehetőleg úgy, hogy az új kolléga is hallja.</p>
+            <p><strong>– Én legalább tudok köszönni!</strong></p>
+            <p>Csend.</p>
+            <p>A főnök rám nézett.</p>
+            <p>A társaság rám nézett.</p>
+            <p>A kijelentés és a munkahelyi késések között ugyanis senkinek nem sikerült megtalálnia az összefüggést.</p>
+            <p>A főnök arca többször megváltozott, a színe pedig igyekezett lépést tartani vele.</p>
+            <p>Kinyitotta a száját.</p>
+            <p>Becsukta.</p>
+            <p>Újra kinyitotta.</p>
+            <p>Semmi.</p>
+            <p>Ekkor már szinte hallani lehetett a fejében működő szerkezetet.</p>
+            <p>A fogaskerekek csikorogva megakadtak.</p>
+            <p>Az ékszíj tovább próbált szaladni, egyre hangosabban visított, majd egy hatalmas:</p>
+            <p><strong>ZÍÍÍMMM!</strong></p>
+            <p>És elszállt.</p>
+            <p>A rendszer leállt.</p>
+            <p>A főnök még mindig engem nézett. Tekintetével valószínűleg egy jéghegyet is ketté tudott volna hasítani.</p>
+            <p>Végül leengedett, színtelen hangon megszólalt:</p>
+            <p><strong>– Valóban. Legalább te tudsz köszönni.</strong></p>
+            <p>Azzal megfordult, és otthagyott bennünket.</p>
+            <p>Azokat is, akik még meg sem kapták a magukét.</p>
+            <p>Volt, aki röhögött.</p>
+            <p>Az idősebbek a fejüket csóválták.</p>
+            <p>Valaki pedig rám nézett, és kimondta a nap legőszintébb értékelését:</p>
+            <p><strong>– Te totál hülye vagy!</strong></p>
+        </div>
+        <div class="disclosure">
+            <p>A történet valós eseményeken alapul, a mesélő emlékei és saját nézőpontja szerint. Más résztvevők eltérően emlékezhetnek a részletekre.</p>
+            <p>A megfogalmazásban és szerkesztésben mesterséges intelligencia működött közre; a bemutatott eseményeket nem mesterséges intelligencia találta ki.</p>
+        </div>
+        <a class="back" href="index.html">← Vissza a történetekhez</a>
+    </article>
 </main>
-<footer>MYTHINGREAL · Történetek az életből</footer>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f934aa3452e04270b12b633f428fcd3f"}'></script><!-- End Cloudflare Web Analytics -->
+<footer>MYTHINGREAL © 2026<p>Real stories. Everyday absurdities.</p></footer>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "f934aa3452e04270b12b633f428fcd3f"}'></script>
+<!-- End Cloudflare Web Analytics -->
 </body>
 </html>
